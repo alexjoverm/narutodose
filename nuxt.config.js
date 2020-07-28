@@ -24,7 +24,14 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-tomorrow.css',
+      },
+    ],
   },
   /*
    ** Global CSS
@@ -55,6 +62,17 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: process.env.STORYBLOK_KEY,
+        cacheProvider: 'memory',
+      },
+    ],
+    [
+      '@nuxtjs/markdownit',
+      { html: true, injected: true, use: ['markdown-it-prism'] },
+    ],
   ],
   /*
    ** Axios module configuration

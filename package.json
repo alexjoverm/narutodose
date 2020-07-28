@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
-    "nuxt": "^2.13.0"
+    "@nuxtjs/markdownit": "^1.2.10",
+    "@tailwindcss/typography": "^0.2.0",
+    "markdown-it-prism": "^2.1.0",
+    "nuxt": "^2.13.0",
+    "storyblok-nuxt": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
