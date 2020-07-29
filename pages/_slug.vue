@@ -22,17 +22,20 @@
 
 <script>
 export default {
-  async asyncData({ app, route }) {
+  async asyncData({ app, route, error }) {
     // Get the slug from the route
     const slug = route.params.slug
 
     const res = await app.$storyapi.get('cdn/stories', {
       starts_with: 'articles/',
-      with_slugs: slug,
+      // Prepend */ to match with the first part of the full_slug
+      by_slugs: '*/' + slug,
       resolve_relations: 'author',
     })
 
     const article = res.data.stories[0]
+    if (!article) return error(`Article with slug ${slug} not found`)
+
     article.content.date = new Date(article.content.date)
 
     return { article, author: article.content.author }
