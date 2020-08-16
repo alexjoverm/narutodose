@@ -5,10 +5,7 @@
         <nuxt-link to="/" class="text-2xl text-white font-semibold">
           NarutoDose
         </nuxt-link>
-        <SearchSelect
-          :search="fetchSuggestions"
-          class="flex-1 max-w-sm ml-12"
-        />
+        <SearchBox :search="fetchSuggestions" class="flex-1 max-w-sm ml-12" />
       </div>
     </div>
   </header>
