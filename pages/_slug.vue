@@ -31,6 +31,7 @@
 
 <script>
 import kebabCase from 'lodash/kebabCase'
+import { createSEOMeta } from '~/utils/seo'
 
 export default {
   async asyncData({ app, route, error }) {
@@ -55,6 +56,15 @@ export default {
     tagSlug(tag) {
       return kebabCase(tag)
     },
+  },
+  head() {
+    const url = this.article.slug
+    const { title, description, image } = this.article.content
+
+    return {
+      title,
+      meta: createSEOMeta({ title, description, image: image.filename, url }),
+    }
   },
 }
 </script>

@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "export": "nuxt export",
+    "generate": "nuxt generate",
     "serve": "nuxt serve",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js"
@@ -14,10 +14,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "^0.2.0",
     "lodash-es": "^4.17.15",
     "markdown-it-prism": "^2.1.0",
-    "nuxt": "^2.13.0",
+    "nuxt": "^2.14.3",
     "storyblok-nuxt": "^1.2.0"
   },
   "devDependencies": {

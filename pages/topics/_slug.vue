@@ -43,5 +43,10 @@ export default {
 
     return { topic, articles }
   },
+  head() {
+    return {
+      title: `${this.topic.name} - NarutoDose`,
+    }
+  },
 }
 </script>
