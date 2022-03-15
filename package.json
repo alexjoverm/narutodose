@@ -16,7 +16,7 @@
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "^0.2.0",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "markdown-it-prism": "^2.1.0",
     "nuxt": "^2.14.3",
     "storyblok-nuxt": "^1.2.0"
